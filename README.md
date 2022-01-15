@@ -61,6 +61,8 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+A closure is when an inner function has access to variables created in an outer function. 
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,9 +84,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+The closure is where the anonymous function inside personalDice() references the parameter "name".
 
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+It will always return "Dan rolled a ___", but the number of the roll could change since it's generating a random number each time.
+
+c. What is the lexical scope of `newRoll`? 
+Since newRoll is declared inside the anonymous function that is returned in personalDice, it can only be used within the personalDice() function. If you were to console.log(newRoll); outside of personalDice(), it would come back as undefined.
 
 ### Task 3 - Stretch Goals
 
